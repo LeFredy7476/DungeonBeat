@@ -1,0 +1,1536 @@
+fileFormatVersion: 2
+guid: 5c4e42687ca4a0746bad4919cb134b10
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 16
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 2
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 1
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
+  asepriteImporterSettings:
+    fileImportMode: 2
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 1
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638936404716267646
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData: []
+  spriteSheetImportData: []
+  tileSetImportData:
+  - name: Layer 2
+    originalName: 
+    pivot: {x: 0.6213592, y: 0.68085104}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1
+      y: 1
+      width: 206
+      height: 188
+    spriteID: 7033368154b9a5546a15e3b6ba9cbe7f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1, y: 1}
+  - name: DungeonBeatTilemap_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 209
+      y: 1
+      width: 16
+      height: 16
+    spriteID: 9efd62ae30cfa5f408bf291892667a47
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 209, y: 1}
+  - name: DungeonBeatTilemap_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 209
+      y: 19
+      width: 16
+      height: 16
+    spriteID: f2547d4865ea4434cacfe26a0b90bc1f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 209, y: 19}
+  - name: DungeonBeatTilemap_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 209
+      y: 37
+      width: 16
+      height: 16
+    spriteID: 4c323523bb8ebf344bb808787e43dfbf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 209, y: 37}
+  - name: DungeonBeatTilemap_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 209
+      y: 55
+      width: 16
+      height: 16
+    spriteID: af64b3b4ac1fe1348a01efa1823967ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 209, y: 55}
+  - name: DungeonBeatTilemap_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 209
+      y: 73
+      width: 16
+      height: 16
+    spriteID: 96c3b04fb8fb71f44abe63ab5830d817
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 209, y: 73}
+  - name: DungeonBeatTilemap_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 209
+      y: 91
+      width: 16
+      height: 16
+    spriteID: 40220533914b9d84f8b545517722e890
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 209, y: 91}
+  - name: DungeonBeatTilemap_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 209
+      y: 109
+      width: 16
+      height: 16
+    spriteID: 93322a245510be34fae58da2f05cea9e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 209, y: 109}
+  - name: DungeonBeatTilemap_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 209
+      y: 127
+      width: 16
+      height: 16
+    spriteID: e36a0d254accc57428dd3990c7222d68
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 209, y: 127}
+  - name: DungeonBeatTilemap_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 209
+      y: 145
+      width: 16
+      height: 16
+    spriteID: 894b5446063f0364d9a44f26c74a5091
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 209, y: 145}
+  - name: DungeonBeatTilemap_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 209
+      y: 163
+      width: 16
+      height: 16
+    spriteID: f9ab41d9540c1054594e698bfdcb4168
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 209, y: 163}
+  - name: DungeonBeatTilemap_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 227
+      y: 1
+      width: 16
+      height: 16
+    spriteID: a8c7a413359334245b334704999eab59
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 227, y: 1}
+  - name: DungeonBeatTilemap_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 227
+      y: 19
+      width: 16
+      height: 16
+    spriteID: 0b054cf6af3940343865104494c183b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 227, y: 19}
+  - name: DungeonBeatTilemap_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 227
+      y: 37
+      width: 16
+      height: 16
+    spriteID: 7e5a7719e94a3e24ca1f79816c3e9f69
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 227, y: 37}
+  - name: DungeonBeatTilemap_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 227
+      y: 55
+      width: 16
+      height: 16
+    spriteID: b7eacc4dd91ba324d95b9930d04733b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 227, y: 55}
+  - name: DungeonBeatTilemap_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 227
+      y: 73
+      width: 16
+      height: 16
+    spriteID: a8e02d170ec193e40afcef373f4cf87c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 227, y: 73}
+  - name: DungeonBeatTilemap_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 227
+      y: 91
+      width: 16
+      height: 16
+    spriteID: 22d28def6465e6d4d9282c19016eecc4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 227, y: 91}
+  - name: DungeonBeatTilemap_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 227
+      y: 109
+      width: 16
+      height: 16
+    spriteID: 082e761eba04cf840b00b602c3790222
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 227, y: 109}
+  - name: DungeonBeatTilemap_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 227
+      y: 127
+      width: 16
+      height: 16
+    spriteID: 232dc5eca74a5a2499e09c7c61e35db0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 227, y: 127}
+  - name: DungeonBeatTilemap_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 227
+      y: 145
+      width: 16
+      height: 16
+    spriteID: 737fc6cc4ebd70c41b26bc28ba005389
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 227, y: 145}
+  - name: DungeonBeatTilemap_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 227
+      y: 163
+      width: 16
+      height: 16
+    spriteID: 461e873dba4d8464bbf7ab56ea0ee5c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 227, y: 163}
+  - name: DungeonBeatTilemap_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1
+      y: 191
+      width: 16
+      height: 16
+    spriteID: e379ae984d2292d44840de4540928c63
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1, y: 191}
+  - name: DungeonBeatTilemap_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 19
+      y: 191
+      width: 16
+      height: 16
+    spriteID: 2e1d4f0db7d61974dba67c176459ae42
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 19, y: 191}
+  - name: DungeonBeatTilemap_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 37
+      y: 191
+      width: 16
+      height: 16
+    spriteID: d1dd145c10ba66042b06756f71710a7f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 37, y: 191}
+  - name: DungeonBeatTilemap_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 55
+      y: 191
+      width: 16
+      height: 16
+    spriteID: 9d3771bf60e114b49a834c437aba3dbb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 55, y: 191}
+  - name: DungeonBeatTilemap_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 191
+      width: 16
+      height: 16
+    spriteID: 8816802281b7d064f979c322cc094d02
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 191}
+  - name: DungeonBeatTilemap_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 91
+      y: 191
+      width: 16
+      height: 16
+    spriteID: 9ccd8ee136576d444a2d1a563c9d05bc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 91, y: 191}
+  - name: DungeonBeatTilemap_27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 191
+      width: 16
+      height: 16
+    spriteID: 26693d447b1c5ff46907ff34bcfbfc85
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 109, y: 191}
+  - name: DungeonBeatTilemap_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 127
+      y: 191
+      width: 16
+      height: 16
+    spriteID: e9c816de8f67c1745aa98979045d2593
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 127, y: 191}
+  - name: DungeonBeatTilemap_29
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 145
+      y: 191
+      width: 16
+      height: 16
+    spriteID: 400f66f702119474ab629053c307ae06
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 145, y: 191}
+  - name: DungeonBeatTilemap_30
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 163
+      y: 191
+      width: 16
+      height: 16
+    spriteID: d738fc9e2a9b69a4e8d45b2b0f815324
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 163, y: 191}
+  - name: DungeonBeatTilemap_31
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 191
+      width: 16
+      height: 16
+    spriteID: 8b988173f8651454d8b2fdca354cbed2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 191}
+  - name: DungeonBeatTilemap_32
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 199
+      y: 191
+      width: 16
+      height: 16
+    spriteID: 90cad5f263498194e98fdccf30b3d0eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 199, y: 191}
+  - name: DungeonBeatTilemap_33
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 217
+      y: 191
+      width: 16
+      height: 16
+    spriteID: b99ceb4a082637f4693900807a05bcf4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 217, y: 191}
+  - name: DungeonBeatTilemap_34
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 235
+      y: 191
+      width: 16
+      height: 16
+    spriteID: 8c485bd23a4bde24d923db5818fdbdf4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 235, y: 191}
+  - name: DungeonBeatTilemap_35
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1
+      y: 209
+      width: 16
+      height: 16
+    spriteID: dc1c4da145dedbe4da5ad9862b1bbbd2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1, y: 209}
+  - name: DungeonBeatTilemap_36
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 19
+      y: 209
+      width: 16
+      height: 16
+    spriteID: a1fcdd1255029dd418ad39b047ce067a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 19, y: 209}
+  - name: DungeonBeatTilemap_37
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 37
+      y: 209
+      width: 16
+      height: 16
+    spriteID: 7b00db87ea499e8449561cdbe4cf9b7e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 37, y: 209}
+  - name: DungeonBeatTilemap_38
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 55
+      y: 209
+      width: 16
+      height: 16
+    spriteID: 98014b09c0460fe49b36515147ca54df
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 55, y: 209}
+  - name: DungeonBeatTilemap_39
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 209
+      width: 16
+      height: 16
+    spriteID: e7aca8ed10d35d44fb60b80311df6707
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 209}
+  - name: DungeonBeatTilemap_40
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 91
+      y: 209
+      width: 16
+      height: 16
+    spriteID: e53c3af70e3b3c04a97930a5f2ed35ad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 91, y: 209}
+  - name: DungeonBeatTilemap_41
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 209
+      width: 16
+      height: 16
+    spriteID: c2e53c3ae4b7c2746836a4771ec7b7d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 109, y: 209}
+  - name: DungeonBeatTilemap_42
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 127
+      y: 209
+      width: 16
+      height: 16
+    spriteID: 09b7ea0f3cedc61409e160cb7d16caef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 127, y: 209}
+  - name: DungeonBeatTilemap_43
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 145
+      y: 209
+      width: 16
+      height: 16
+    spriteID: afec72e479e60004bbc8794e1793ea7e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 145, y: 209}
+  - name: DungeonBeatTilemap_44
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 163
+      y: 209
+      width: 16
+      height: 16
+    spriteID: 76236c270591ef4459120a8ec7575d77
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 163, y: 209}
+  - name: DungeonBeatTilemap_45
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 209
+      width: 16
+      height: 16
+    spriteID: 69e163e1a2453aa4c89cfdf0b9d0d8c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 209}
+  - name: DungeonBeatTilemap_46
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 199
+      y: 209
+      width: 16
+      height: 16
+    spriteID: f206906e7eb68c040aaa77e14ade90be
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 199, y: 209}
+  - name: DungeonBeatTilemap_47
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 217
+      y: 209
+      width: 16
+      height: 16
+    spriteID: 3b5a55d6deaf2644e927cfdd1b1a7a2d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 217, y: 209}
+  - name: DungeonBeatTilemap_48
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 235
+      y: 209
+      width: 16
+      height: 16
+    spriteID: 088279a83baa8864ba5d6ed4009b3cc3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 235, y: 209}
+  asepriteLayers:
+  - layerIndex: 0
+    uuid:
+      value0: 4287466680
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 0
+    name: Layer 1
+    layerFlags: 3
+    layerType: 2
+    blendMode: 0
+    cells: []
+    linkedCells: []
+    tileCells:
+    - layerIndex: 0
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 15
+        height: 4
+      tileIndices: 07000000080000000900000001000000120000000d00000019000000150000001a0000001d0000001f00000028000000210000002d0000002e000000060000000e0000000a0000000f00000010000000110000001800000014000000170000001e000000270000000e000000260000002f000000300000000500000004000000030000000b000000130000000c0000001c000000160000001b000000220000002300000025000000240000002b0000002c00000000000000000000000200000000000000000000000000000000000000000000000000000020000000000000000000000000000000290000002a000000
+    tileSetIndex: 0
+    parentIndex: -1
+  - layerIndex: 1
+    uuid:
+      value0: 4287466677
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 0
+    name: Layer 2
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Layer 2
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 33
+        y: 3
+        width: 206
+        height: 188
+      spriteId: 7033368154b9a5546a15e3b6ba9cbe7f
+    linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
+    parentIndex: -1
+  tileSets:
+  - id: 0
+    name: DungeonBeatTilemap
+    tileSize:
+      x: 16
+      y: 16
+    tiles:
+    - tileId: 1
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_1
+      spriteId: 9efd62ae30cfa5f408bf291892667a47
+    - tileId: 2
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_2
+      spriteId: f2547d4865ea4434cacfe26a0b90bc1f
+    - tileId: 3
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_3
+      spriteId: 4c323523bb8ebf344bb808787e43dfbf
+    - tileId: 4
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_4
+      spriteId: af64b3b4ac1fe1348a01efa1823967ea
+    - tileId: 5
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_5
+      spriteId: 96c3b04fb8fb71f44abe63ab5830d817
+    - tileId: 6
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_6
+      spriteId: 40220533914b9d84f8b545517722e890
+    - tileId: 7
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_7
+      spriteId: 93322a245510be34fae58da2f05cea9e
+    - tileId: 8
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_8
+      spriteId: e36a0d254accc57428dd3990c7222d68
+    - tileId: 9
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_9
+      spriteId: 894b5446063f0364d9a44f26c74a5091
+    - tileId: 10
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_10
+      spriteId: f9ab41d9540c1054594e698bfdcb4168
+    - tileId: 11
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_11
+      spriteId: a8c7a413359334245b334704999eab59
+    - tileId: 12
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_12
+      spriteId: 0b054cf6af3940343865104494c183b6
+    - tileId: 13
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_13
+      spriteId: 7e5a7719e94a3e24ca1f79816c3e9f69
+    - tileId: 14
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_14
+      spriteId: b7eacc4dd91ba324d95b9930d04733b7
+    - tileId: 15
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_15
+      spriteId: a8e02d170ec193e40afcef373f4cf87c
+    - tileId: 16
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_16
+      spriteId: 22d28def6465e6d4d9282c19016eecc4
+    - tileId: 17
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_17
+      spriteId: 082e761eba04cf840b00b602c3790222
+    - tileId: 18
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_18
+      spriteId: 232dc5eca74a5a2499e09c7c61e35db0
+    - tileId: 19
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_19
+      spriteId: 737fc6cc4ebd70c41b26bc28ba005389
+    - tileId: 20
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_20
+      spriteId: 461e873dba4d8464bbf7ab56ea0ee5c2
+    - tileId: 21
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_21
+      spriteId: e379ae984d2292d44840de4540928c63
+    - tileId: 22
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_22
+      spriteId: 2e1d4f0db7d61974dba67c176459ae42
+    - tileId: 23
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_23
+      spriteId: d1dd145c10ba66042b06756f71710a7f
+    - tileId: 24
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_24
+      spriteId: 9d3771bf60e114b49a834c437aba3dbb
+    - tileId: 25
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_25
+      spriteId: 8816802281b7d064f979c322cc094d02
+    - tileId: 26
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_26
+      spriteId: 9ccd8ee136576d444a2d1a563c9d05bc
+    - tileId: 27
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_27
+      spriteId: 26693d447b1c5ff46907ff34bcfbfc85
+    - tileId: 28
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_28
+      spriteId: e9c816de8f67c1745aa98979045d2593
+    - tileId: 29
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_29
+      spriteId: 400f66f702119474ab629053c307ae06
+    - tileId: 30
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_30
+      spriteId: d738fc9e2a9b69a4e8d45b2b0f815324
+    - tileId: 31
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_31
+      spriteId: 8b988173f8651454d8b2fdca354cbed2
+    - tileId: 32
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_32
+      spriteId: 90cad5f263498194e98fdccf30b3d0eb
+    - tileId: 33
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_33
+      spriteId: b99ceb4a082637f4693900807a05bcf4
+    - tileId: 34
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_34
+      spriteId: 8c485bd23a4bde24d923db5818fdbdf4
+    - tileId: 35
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_35
+      spriteId: dc1c4da145dedbe4da5ad9862b1bbbd2
+    - tileId: 36
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_36
+      spriteId: a1fcdd1255029dd418ad39b047ce067a
+    - tileId: 37
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_37
+      spriteId: 7b00db87ea499e8449561cdbe4cf9b7e
+    - tileId: 38
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_38
+      spriteId: 98014b09c0460fe49b36515147ca54df
+    - tileId: 39
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_39
+      spriteId: e7aca8ed10d35d44fb60b80311df6707
+    - tileId: 40
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_40
+      spriteId: e53c3af70e3b3c04a97930a5f2ed35ad
+    - tileId: 41
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_41
+      spriteId: c2e53c3ae4b7c2746836a4771ec7b7d3
+    - tileId: 42
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_42
+      spriteId: 09b7ea0f3cedc61409e160cb7d16caef
+    - tileId: 43
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_43
+      spriteId: afec72e479e60004bbc8794e1793ea7e
+    - tileId: 44
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_44
+      spriteId: 76236c270591ef4459120a8ec7575d77
+    - tileId: 45
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_45
+      spriteId: 69e163e1a2453aa4c89cfdf0b9d0d8c8
+    - tileId: 46
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_46
+      spriteId: f206906e7eb68c040aaa77e14ade90be
+    - tileId: 47
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_47
+      spriteId: 3b5a55d6deaf2644e927cfdd1b1a7a2d
+    - tileId: 48
+      size:
+        x: 16
+        y: 16
+      name: DungeonBeatTilemap_48
+      spriteId: 088279a83baa8864ba5d6ed4009b3cc3
+    guid: 1999223382
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 256, y: 256}
+  previousTextureSize: {x: 256, y: 256}
