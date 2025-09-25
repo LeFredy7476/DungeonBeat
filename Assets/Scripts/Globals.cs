@@ -20,6 +20,8 @@ public class Globals : MonoBehaviour
     public Tilemap worldTilemap;
     public static Globals Instance { get; private set; }
 
+    public Material beatVisualizer;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -135,6 +137,7 @@ public class Globals : MonoBehaviour
                 currentTick8 = actualTick8;
                 BroadcastMessage("Tick8", SendMessageOptions.DontRequireReceiver);
             }
+            beatVisualizer.SetFloat("_TickProgression", (float) tickProgression);
         }
     }
 }
