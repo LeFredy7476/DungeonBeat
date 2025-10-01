@@ -12,7 +12,7 @@ public class Door : EntityControls
         current = new Vector2Int((int)transform.position.x, (int)transform.position.y);
         last = new Vector2(transform.position.x, transform.position.y);
         mapPresence = new MapPresence(this, false);
-        globals.mapPresences.Add(mapPresence);
+        globals.gridSystem.mapPresences.Add(mapPresence);
         alignment = Alignment.NEUTRAL;
     }
 

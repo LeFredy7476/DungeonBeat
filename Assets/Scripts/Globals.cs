@@ -3,24 +3,16 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class MapPresence
-{
-    public MapPresence(EntityControls entity, bool passable)
-    {
-        this.entity = entity;
-        this.passable = passable;
-    }
-    public EntityControls entity;
-    public bool passable;
-}
 
+
+[RequireComponent(typeof(GridSystem))]
 public class Globals : MonoBehaviour
 {
-
-    public Tilemap worldTilemap;
     public static Globals Instance { get; private set; }
 
     public Material beatVisualizer;
+
+    public GridSystem gridSystem;
 
     private void Awake()
     {
@@ -35,7 +27,11 @@ public class Globals : MonoBehaviour
         }
     }
 
-    public List<MapPresence> mapPresences = new List<MapPresence>() { };
+    void Start()
+    {
+        gridSystem = GetComponent<GridSystem>();
+    }
+
 
     public bool inGame = true;
     public double timeSinceLastTick { get; private set; } = 0.0;
@@ -46,69 +42,6 @@ public class Globals : MonoBehaviour
     public double bpmDuration = 60.0 / 90.0;
     public const double easingRatio = 0.000001;
     public double currentEasingRatio { get; private set; } = 0.0;
-
-    public double EaseExp(double from, double to)
-    {
-        return to - (to - from) * currentEasingRatio;
-    }
-    public float EaseExp(float from, float to)
-    {
-        float ease = (float)currentEasingRatio;
-        return to - (to - from) * ease;
-    }
-    public Vector2 EaseExp(Vector2 from, Vector2 to)
-    {
-        float ease = (float)currentEasingRatio;
-        return to - (to - from) * new Vector2(ease, ease);
-    }
-    public Vector3 EaseExp(Vector3 from, Vector3 to)
-    {
-        float ease = (float)currentEasingRatio;
-        Vector3 result = to - from;
-        result.Scale(new Vector3(ease, ease, ease));
-        return to - result;
-    }
-    public Vector4 EaseExp(Vector4 from, Vector4 to)
-    {
-        float ease = (float)currentEasingRatio;
-        Vector4 result = to - from;
-        result.Scale(new Vector4(ease, ease, ease, ease));
-        return to - result;
-    }
-
-    public bool CheckTile(int x, int y)
-    {
-        return CheckTile(x, y, false); // TODO : link to the grid
-    }
-    public bool CheckTile(int x, int y, bool ignoreEntity)
-    {
-        Vector3Int tilepos = new Vector3Int(x, y);
-        TileBase tile = worldTilemap.GetTile(tilepos);
-        bool passable = tile == null; // TODO : link to the grid
-        for (int e = 0; e < mapPresences.Count; e++)
-        {
-            if (x == mapPresences[e].entity.current.x && y == mapPresences[e].entity.current.y)
-            {
-                passable = passable && mapPresences[e].passable;
-            }
-        }
-        return passable;
-    }
-
-    public MapPresence TestForPresence(Vector2Int pos)
-    {
-        for (int e = 0; e < mapPresences.Count; e++)
-        {
-            if (pos.x == mapPresences[e].entity.current.x && pos.y == mapPresences[e].entity.current.y)
-            {
-                if (!mapPresences[e].passable)
-                {
-                    return mapPresences[e];
-                }
-            }
-        }
-        return null;
-    }
 
     void Update()
     {
@@ -123,6 +56,7 @@ public class Globals : MonoBehaviour
                 BroadcastMessage("TickSystem", SendMessageOptions.DontRequireReceiver);
                 BroadcastMessage("TickPlayer", SendMessageOptions.DontRequireReceiver);
                 BroadcastMessage("TickMonster", SendMessageOptions.DontRequireReceiver);
+                BroadcastMessage("TickPlayerLate", SendMessageOptions.DontRequireReceiver);
             }
             else
             {

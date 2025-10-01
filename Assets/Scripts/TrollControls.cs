@@ -24,7 +24,7 @@ public class TrollControls : EntityControls
         current = new Vector2Int((int)transform.position.x, (int)transform.position.y);
         last = new Vector2(transform.position.x, transform.position.y);
         mapPresence = new MapPresence(this, false);
-        globals.mapPresences.Add(mapPresence);
+        globals.gridSystem.mapPresences.Add(mapPresence);
         alignment = Alignment.EVIL;
     }
 
@@ -54,7 +54,7 @@ public class TrollControls : EntityControls
             if (attack)
             {
                 last += 0.5f * Face.ToVector2(face);
-                MapPresence facingPresence = globals.TestForPresence(GetFacingTile());
+                MapPresence facingPresence = globals.gridSystem.TestForPresence(GetFacingTile());
                 if (facingPresence != null && facingPresence.entity != null)
                 {
                     if (facingPresence.entity.alignment == Alignment.GOOD)
@@ -112,7 +112,7 @@ public class TrollControls : EntityControls
                 ApplyLook();
                 if (delta == 0 && attackCooldown <= 0)
                 {
-                    MapPresence facingPresence = globals.TestForPresence(GetFacingTile());
+                    MapPresence facingPresence = globals.gridSystem.TestForPresence(GetFacingTile());
                     if (facingPresence != null && facingPresence.entity != null)
                     {
                         if (facingPresence.entity.alignment == Alignment.GOOD)

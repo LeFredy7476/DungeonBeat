@@ -73,7 +73,7 @@ public class EntityControls : MonoBehaviour
         for (int i = 1; i <= distance; i++)
         {
             Vector2Int posToCheck = current + i * directionVector;
-            if (Globals.Instance.CheckTile(posToCheck.x, posToCheck.y, ignoreEntity))
+            if (Globals.Instance.gridSystem.CheckTile(posToCheck.x, posToCheck.y, ignoreEntity))
             {
                 actualDistance = i;
             }
@@ -135,7 +135,7 @@ public class EntityControls : MonoBehaviour
     {
         if (health <= 0)
         {
-            Globals.Instance.mapPresences.Remove(mapPresence);
+            Globals.Instance.gridSystem.mapPresences.Remove(mapPresence);
             Destroy(gameObject);
         }
     }

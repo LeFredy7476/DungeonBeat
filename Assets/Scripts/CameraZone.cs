@@ -9,14 +9,8 @@ public class CameraZone : MonoBehaviour
     public float zoom = 4;
     public Collider2D player;
 
-
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
-    public void TickPlayer()
+    public void TickPlayerLate()
     {
         // Debug.Log(GetComponent<BoxCollider2D>().IsTouching(player));
         if (GetComponent<BoxCollider2D>().IsTouching(player))

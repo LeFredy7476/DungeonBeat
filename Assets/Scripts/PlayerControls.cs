@@ -21,7 +21,7 @@ public class PlayerControls : EntityControls
     {
         globals = Globals.Instance;
         mapPresence = new MapPresence(this, false);
-        globals.mapPresences.Add(mapPresence);
+        globals.gridSystem.mapPresences.Add(mapPresence);
     }
 
     // Update is called once per frame
@@ -49,7 +49,7 @@ public class PlayerControls : EntityControls
             ApplyLook();
             swordHolder.Turn(face);
             swordHolder.Slash(face);
-            MapPresence facingPresence = globals.TestForPresence(GetFacingTile());
+            MapPresence facingPresence = globals.gridSystem.TestForPresence(GetFacingTile());
             if (facingPresence != null && facingPresence.entity != null)
             {
                 if (facingPresence.entity.alignment == Alignment.EVIL)
