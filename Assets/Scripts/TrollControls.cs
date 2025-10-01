@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TrollControls : EntityControls
 {
-    string[] moves = { "up", "down", "left", "right" };
-    string nextMove = "";
+    readonly Face.Faces[] moves = { Face.UP, Face.DOWN, Face.LEFT, Face.RIGHT };
+    Face.Faces nextMove = Face.NONE;
 
     public EntityControls aggro = null;
     public int aggroCooldown = 0;
@@ -21,10 +21,8 @@ public class TrollControls : EntityControls
     void Start()
     {
         globals = Globals.Instance;
-        currentX = (int)transform.position.x;
-        currentY = (int)transform.position.y;
-        lastX = (int)transform.position.x;
-        lastY = (int)transform.position.y;
+        current = new Vector2Int((int)transform.position.x, (int)transform.position.y);
+        last = new Vector2(transform.position.x, transform.position.y);
         mapPresence = new MapPresence(this, false);
         globals.mapPresences.Add(mapPresence);
         alignment = Alignment.EVIL;
@@ -55,10 +53,7 @@ public class TrollControls : EntityControls
         {
             if (attack)
             {
-                if (face == "up") lastY += 0.5f;
-                else if (face == "down") lastY -= 0.5f;
-                else if (face == "left") lastX -= 0.5f;
-                else if (face == "right") lastX += 0.5f;
+                last += 0.5f * Face.ToVector2(face);
                 MapPresence facingPresence = globals.TestForPresence(GetFacingTile());
                 if (facingPresence != null && facingPresence.entity != null)
                 {
@@ -79,27 +74,27 @@ public class TrollControls : EntityControls
                 int delta = 0;
                 if (aggro != null)
                 {
-                    if (aggro.currentX < currentX)
+                    if (aggro.current.x < current.x)
                     {
-                        nextMove = "left";
+                        nextMove = Face.LEFT;
                         delta = ApplyMovement(nextMove, moveScale, false);
                     }
-                    else if (aggro.currentX > currentX)
+                    else if (aggro.current.x > current.x)
                     {
-                        nextMove = "right";
+                        nextMove = Face.RIGHT;
                         delta = ApplyMovement(nextMove, moveScale, false);
                     }
 
                     if (delta == 0)
                     {
-                        if (aggro.currentY < currentY)
+                        if (aggro.current.y < current.y)
                         {
-                            nextMove = "down";
+                            nextMove = Face.DOWN;
                             delta = ApplyMovement(nextMove, moveScale, false);
                         }
-                        else if (aggro.currentY > currentY)
+                        else if (aggro.current.y > current.y)
                         {
-                            nextMove = "up";
+                            nextMove = Face.UP;
                             delta = ApplyMovement(nextMove, moveScale, false);
                         }
                     }
@@ -113,7 +108,7 @@ public class TrollControls : EntityControls
                     }
                     delta = ApplyMovement(nextMove, moveScale, false);
                 }
-                if (nextMove != "") face = nextMove;
+                if (Face.NotNone(nextMove)) face = nextMove;
                 ApplyLook();
                 if (delta == 0 && attackCooldown <= 0)
                 {
@@ -129,7 +124,7 @@ public class TrollControls : EntityControls
                     }
                 }
             }
-            nextMove = "";
+            nextMove = Face.NONE;
             attackCooldown -= 1;
             aggroCooldown -= 1;
             if (aggroCooldown <= 0)

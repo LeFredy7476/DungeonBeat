@@ -9,16 +9,12 @@ public class PlayerControls : EntityControls
     [Range(0f, 1f)] public float slashVol;
     public AudioClip[] footsteps;
 
-    string nextMove = "";
-    string nextSlash = "";
+    Face.Faces nextMove = Face.NONE;
+    Face.Faces nextSlash = Face.NONE;
     bool nextDash = false;
 
     public GameObject sword;
-
-    public Sprite swordUp;
-    public Sprite swordDown;
-    public Sprite swordLeft;
-    public Sprite swordRight;
+    public SwordHolder swordHolder;
 
     Globals globals;
     void Start()
@@ -41,24 +37,18 @@ public class PlayerControls : EntityControls
         FlushLast();
         int moveScale = nextDash ? 2 : 1;
         ApplyMovement(nextMove, moveScale, false);
-        if (nextSlash.Equals(""))
+        if (Face.IsNone(nextSlash))
         {
-            if (nextMove != "") face = nextMove;
+            if (Face.NotNone(nextMove)) face = nextMove;
             ApplyLook();
-            ApplySword();
-            TurnSword();
+            swordHolder.Turn(face);
         }
         else
         {
             face = nextSlash;
             ApplyLook();
-            TurnSword();
-            ApplySword();
-            int currentTick = globals.currenTick % 2;
-            sword.GetComponent<Animator>().SetBool("Reverse", currentTick == 1);
-            sword.GetComponent<Animator>().SetTrigger("Slash");
-            audioSource.pitch = Random.Range(0.75f, 1.25f);
-            audioSource.PlayOneShot(slashes[currentTick], slashVol);
+            swordHolder.Turn(face);
+            swordHolder.Slash(face);
             MapPresence facingPresence = globals.TestForPresence(GetFacingTile());
             if (facingPresence != null && facingPresence.entity != null)
             {
@@ -68,43 +58,43 @@ public class PlayerControls : EntityControls
                 }
             }
         }
-        nextMove = "";
-        nextSlash = "";
+        nextMove = Face.NONE;
+        nextSlash = Face.NONE;
         nextDash = false;
     }
 
     public void OnMoveUp()
     {
-        nextMove = "up";
+        nextMove = Face.UP;
     }
     public void OnMoveDown()
     {
-        nextMove = "down";
+        nextMove = Face.DOWN;
     }
     public void OnMoveLeft()
     {
-        nextMove = "left";
+        nextMove = Face.LEFT;
     }
     public void OnMoveRight()
     {
-        nextMove = "right";
+        nextMove = Face.RIGHT;
     }
 
     public void OnSlashUp()
     {
-        nextSlash = "up";
+        nextSlash = Face.UP;
     }
     public void OnSlashDown()
     {
-        nextSlash = "down";
+        nextSlash = Face.DOWN;
     }
     public void OnSlashLeft()
     {
-        nextSlash = "left";
+        nextSlash = Face.LEFT;
     }
     public void OnSlashRight()
     {
-        nextSlash = "right";
+        nextSlash = Face.RIGHT;
     }
 
     public void OnDash()
@@ -114,46 +104,12 @@ public class PlayerControls : EntityControls
 
     public void ApplySword()
     {
-        if (face.Equals("up"))
-        {
-            sword.GetComponent<SpriteRenderer>().sprite = swordUp;
-            sword.GetComponent<Animator>().SetInteger("Face", 0);
-        }
-        else if (face.Equals("down"))
-        {
-            sword.GetComponent<SpriteRenderer>().sprite = swordDown;
-            sword.GetComponent<Animator>().SetInteger("Face", 1);
-        }
-        else if (face.Equals("left"))
-        {
-            sword.GetComponent<SpriteRenderer>().sprite = swordLeft;
-            sword.GetComponent<Animator>().SetInteger("Face", 2);
-        }
-        else if (face.Equals("right"))
-        {
-            sword.GetComponent<SpriteRenderer>().sprite = swordRight;
-            sword.GetComponent<Animator>().SetInteger("Face", 3);
-        }
+        
     }
 
     public void TurnSword()
     {
-        if (face.Equals("up"))
-        {
-            sword.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 0);
-        }
-        else if (face.Equals("down"))
-        {
-            sword.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 180);
-        }
-        else if (face.Equals("left"))
-        {
-            sword.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 90);
-        }
-        else if (face.Equals("right"))
-        {
-            sword.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, -90);
-        }
+        
     }
 
     public void Tick8()

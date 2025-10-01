@@ -35,7 +35,7 @@ public class Globals : MonoBehaviour
         }
     }
 
-    public List<MapPresence> mapPresences = new List<MapPresence>() {};
+    public List<MapPresence> mapPresences = new List<MapPresence>() { };
 
     public bool inGame = true;
     public double timeSinceLastTick { get; private set; } = 0.0;
@@ -87,7 +87,7 @@ public class Globals : MonoBehaviour
         bool passable = tile == null; // TODO : link to the grid
         for (int e = 0; e < mapPresences.Count; e++)
         {
-            if (x == mapPresences[e].entity.currentX && y == mapPresences[e].entity.currentY)
+            if (x == mapPresences[e].entity.current.x && y == mapPresences[e].entity.current.y)
             {
                 passable = passable && mapPresences[e].passable;
             }
@@ -99,7 +99,7 @@ public class Globals : MonoBehaviour
     {
         for (int e = 0; e < mapPresences.Count; e++)
         {
-            if (pos.x == mapPresences[e].entity.currentX && pos.y == mapPresences[e].entity.currentY)
+            if (pos.x == mapPresences[e].entity.current.x && pos.y == mapPresences[e].entity.current.y)
             {
                 if (!mapPresences[e].passable)
                 {
@@ -137,7 +137,7 @@ public class Globals : MonoBehaviour
                 currentTick8 = actualTick8;
                 BroadcastMessage("Tick8", SendMessageOptions.DontRequireReceiver);
             }
-            beatVisualizer.SetFloat("_TickProgression", (float) tickProgression);
+            beatVisualizer.SetFloat("_TickProgression", (float)tickProgression);
         }
     }
 }

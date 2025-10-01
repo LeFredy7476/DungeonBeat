@@ -70,7 +70,7 @@ Material:
     - _EnableExternalAlpha: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _TickProgression: 0.96533525
+    - _TickProgression: 0.3246496
     - _ZWrite: 0
     - _timeSinceLastTick: 0
     m_Colors:

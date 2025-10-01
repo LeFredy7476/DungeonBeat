@@ -1,4 +1,3 @@
-
 using System;
 using UnityEngine;
 
@@ -14,10 +13,8 @@ public class EntityControls : MonoBehaviour
     public int health;
     public Alignment alignment;
 
-    public int currentX;
-    public int currentY;
-    public float lastX;
-    public float lastY;
+    public Vector2Int current;
+    public Vector2 last;
 
     readonly Color WHITE = Color.white;
     readonly Color BLACK = new Color(24.0f / 255, 20.0f / 255, 37.0f / 255);
@@ -40,7 +37,7 @@ public class EntityControls : MonoBehaviour
 
     public MapPresence mapPresence;
 
-    public string face;
+    public Face.Faces face;
 
     public virtual bool ReceiveDamage(int amount, EntityControls source)
     {
@@ -56,98 +53,37 @@ public class EntityControls : MonoBehaviour
 
     public void FlushLast()
     {
-        lastX = currentX;
-        lastY = currentY;
+        last = current;
+        current = new Vector2Int(current.x, current.y);
     }
 
     public void ApplyLook()
     {
-        if (face.Equals("up"))
-        {
-            GetComponent<SpriteRenderer>().sprite = upSprite;
-            selfBg.GetComponent<SpriteRenderer>().sprite = upBgSprite;
-        }
-        else if (face.Equals("down"))
-        {
-            GetComponent<SpriteRenderer>().sprite = downSprite;
-            selfBg.GetComponent<SpriteRenderer>().sprite = downBgSprite;
-        }
-        else if (face.Equals("left"))
-        {
-            GetComponent<SpriteRenderer>().sprite = leftSprite;
-            selfBg.GetComponent<SpriteRenderer>().sprite = leftBgSprite;
-        }
-        else if (face.Equals("right"))
-        {
-            GetComponent<SpriteRenderer>().sprite = rightSprite;
-            selfBg.GetComponent<SpriteRenderer>().sprite = rightBgSprite;
-        }
+        GetComponent<SpriteRenderer>().sprite = 
+            Face.Select(face, upSprite, downSprite, leftSprite, rightSprite);
+        selfBg.GetComponent<SpriteRenderer>().sprite = 
+            Face.Select(face, upBgSprite, downBgSprite, leftBgSprite, rightBgSprite);
+        
     }
 
-    public int ApplyMovement(string direction, int distance, bool ignoreEntity)
+    public int ApplyMovement(Face.Faces direction, int distance, bool ignoreEntity)
     {
+        Vector2Int directionVector = Face.ToVector2Int(direction);
         int actualDistance = 0;
-        direction = direction.ToLower();
-        if (direction.Equals("up"))
+        for (int i = 1; i <= distance; i++)
         {
-            for (int i = 1; i <= distance; i++)
+            Vector2Int posToCheck = current + i * directionVector;
+            if (Globals.Instance.CheckTile(posToCheck.x, posToCheck.y, ignoreEntity))
             {
-                if (Globals.Instance.CheckTile(currentX, currentY + i, ignoreEntity))
-                {
-                    actualDistance = i;
-                }
-                else break;
+                actualDistance = i;
             }
-            if (actualDistance != 0)
-            {
-                currentY += actualDistance;
-            }
+            else break;
         }
-        else if (direction.Equals("down"))
+        if (actualDistance != 0)
         {
-            for (int i = 1; i <= distance; i++)
-            {
-                if (Globals.Instance.CheckTile(currentX, currentY - i, ignoreEntity))
-                {
-                    actualDistance = i;
-                }
-                else break;
-            }
-            if (actualDistance != 0)
-            {
-                currentY -= actualDistance;
-            }
+            current += actualDistance * directionVector;
         }
-        else if (direction.Equals("left"))
-        {
-            for (int i = 1; i <= distance; i++)
-            {
-                if (Globals.Instance.CheckTile(currentX - i, currentY, ignoreEntity))
-                {
-                    actualDistance = i;
-                }
-                else break;
-            }
-            if (actualDistance != 0)
-            {
-                currentX -= actualDistance;
-            }
-        }
-        else if (direction.Equals("right"))
-        {
-            for (int i = 1; i <= distance; i++)
-            {
-                if (Globals.Instance.CheckTile(currentX + i, currentY, ignoreEntity))
-                {
-                    actualDistance = i;
-                }
-                else break;
-            }
-            if (actualDistance != 0)
-            {
-                currentX += actualDistance;
-            }
-        }
+        
         return actualDistance;
     }
 
@@ -161,9 +97,8 @@ public class EntityControls : MonoBehaviour
     public void UpdatePosition()
     {
         float currentEase = CurrentEase();
-        float x = (1 - currentEase) * lastX + currentEase * currentX;
-        float y = (1 - currentEase) * lastY + currentEase * currentY;
-        GetComponent<Transform>().position = new Vector2(x, y);
+        Vector2 pos = (1 - currentEase) * (Vector2)last + currentEase * (Vector2)current;
+        GetComponent<Transform>().position = pos;
     }
 
     public void UpdateColor()
@@ -193,26 +128,7 @@ public class EntityControls : MonoBehaviour
     }
     public Vector2Int GetFacingTile(int distance)
     {
-        if (face.Equals("up"))
-        {
-            return new Vector2Int(currentX, currentY + distance);
-        }
-        else if (face.Equals("down"))
-        {
-            return new Vector2Int(currentX, currentY - distance);
-        }
-        else if (face.Equals("left"))
-        {
-            return new Vector2Int(currentX - distance, currentY);
-        }
-        else if (face.Equals("right"))
-        {
-            return new Vector2Int(currentX + distance, currentY);
-        }
-        else
-        {
-            return new Vector2Int(currentX, currentY);
-        }
+        return current + Face.ToVector2Int(face) * distance;
     }
 
     public void Refresh()

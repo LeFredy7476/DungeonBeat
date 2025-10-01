@@ -9,10 +9,8 @@ public class Door : EntityControls
     void Start()
     {
         globals = Globals.Instance;
-        currentX = (int)transform.position.x;
-        currentY = (int)transform.position.y;
-        lastX = (int)transform.position.x;
-        lastY = (int)transform.position.y;
+        current = new Vector2Int((int)transform.position.x, (int)transform.position.y);
+        last = new Vector2(transform.position.x, transform.position.y);
         mapPresence = new MapPresence(this, false);
         globals.mapPresences.Add(mapPresence);
         alignment = Alignment.NEUTRAL;
