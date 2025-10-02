@@ -15,6 +15,6 @@ public class Btn : MonoBehaviour
 
     private void TaskButton()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
