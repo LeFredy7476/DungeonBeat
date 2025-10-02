@@ -2,55 +2,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class MapPresence
+public class GridSystem : MyMonoBehaviour
 {
-    public MapPresence(EntityControls entity, bool passable)
-    {
-        this.entity = entity;
-        this.passable = passable;
-    }
-    public EntityControls entity;
-    public bool passable;
-}
-
-public class GridSystem : MonoBehaviour
-{
-
-    public List<MapPresence> mapPresences = new() { };
     public Tilemap worldTilemap;
+    public List<GridEntity> gridEntities = new();
 
-    void Start()
+    public bool CanWalk(Vector2Int pos, MovableGridEntity entity)
     {
-
-    }
-
-    public bool CheckTile(int x, int y, bool ignoreEntity)
-    {
-        Vector3Int tilepos = new Vector3Int(x, y);
+        Vector3Int tilepos = new Vector3Int(pos.x, pos.y, 0);
         TileBase tile = worldTilemap.GetTile(tilepos);
-        bool passable = tile == null;
-        for (int e = 0; e < mapPresences.Count; e++)
+        bool noWalls = tile == null;
+        bool noEntity = true;
+        for (int e = 0; e < gridEntities.Count; e++)
         {
-            if (x == mapPresences[e].entity.current.x && y == mapPresences[e].entity.current.y)
+            GridEntity gridEntity = gridEntities[e];
+            if (gridEntity.CurrentPos == pos)
             {
-                passable = passable && mapPresences[e].passable;
-            }
-        }
-        return passable;
-    }
-
-    public MapPresence TestForPresence(Vector2Int pos)
-    {
-        for (int e = 0; e < mapPresences.Count; e++)
-        {
-            if (pos.x == mapPresences[e].entity.current.x && pos.y == mapPresences[e].entity.current.y)
-            {
-                if (!mapPresences[e].passable)
+                if (gridEntity.alive)
                 {
-                    return mapPresences[e];
+                    if (entity is Player)
+                    {
+                        noEntity = noEntity && (gridEntity.playerOnlyPass || gridEntity.ghosted);
+                    }
+                    else
+                    {
+                        noEntity = noEntity && gridEntity.ghosted;
+                    }
                 }
             }
         }
-        return null;
+        return noWalls && noEntity;
     }
 }

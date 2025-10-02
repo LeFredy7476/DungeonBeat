@@ -43,6 +43,8 @@ public class Globals : MonoBehaviour
     public const double easingRatio = 0.000001;
     public double currentEasingRatio { get; private set; } = 0.0;
 
+    public Player player;
+
     void Update()
     {
         if (inGame)

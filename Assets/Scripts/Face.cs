@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public static class Face
@@ -117,11 +118,42 @@ public static class Face
         };
     }
 
+    public static Faces Inverse(Faces face)
+    {
+        return face switch
+        {
+            Faces.DOWN => Faces.UP,
+            Faces.UP => Faces.DOWN,
+            Faces.RIGHT => Faces.LEFT,
+            Faces.LEFT => Faces.RIGHT,
+            _ => Faces.NONE
+        };
+    }
+
     public static Faces RandomFace()
     {
         int randint = (int)UnityEngine.Random.Range(0.0f, 4.0f);
         randint = randint == 4 ? 0 : randint;
         return FromInt(randint);
+    }
+
+    public static Faces PathFind(Vector2Int path)
+    {
+        bool horizontal = Math.Abs(path.x) >= (Math.Abs(path.y) + UnityEngine.Random.Range(-0.5f, 0.5f));
+        if (path == Vector2Int.zero)
+        {
+            return Faces.NONE;
+        }
+        else if (horizontal)
+        {
+            if (path.x > 0) return Faces.RIGHT;
+            else return Faces.LEFT;
+        }
+        else
+        {
+            if (path.y > 0) return Faces.UP;
+            else return Faces.DOWN;
+        }
     }
 }
 

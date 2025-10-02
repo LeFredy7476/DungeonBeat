@@ -100,7 +100,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2710172559678381259}
   - component: {fileID: 1043239487233356172}
-  - component: {fileID: 743805598781112453}
+  - component: {fileID: 7663808753856478043}
+  - component: {fileID: 7762078329181788055}
+  - component: {fileID: 6349580075349226055}
   m_Layer: 0
   m_Name: Troll
   m_TagString: Untagged
@@ -182,7 +184,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &743805598781112453
+--- !u!114 &7663808753856478043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,28 +193,136 @@ MonoBehaviour:
   m_GameObject: {fileID: 2939650004526901298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd286b89a2ce0574fbcf6c8e790ec5fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 135ba24aafefad24ba2ef2e067b4ebd7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
-  health: 5
-  alignment: 2
-  currentX: 0
-  currentY: 0
-  lastX: 0
-  lastY: 0
-  upSprite: {fileID: -3074640481320496088, guid: b1f04ee7c9aa58e498f1abfc86703c7a, type: 3}
-  downSprite: {fileID: -2246245484648453396, guid: b1f04ee7c9aa58e498f1abfc86703c7a, type: 3}
-  leftSprite: {fileID: -1777073656344616, guid: b1f04ee7c9aa58e498f1abfc86703c7a, type: 3}
-  rightSprite: {fileID: -1609190528228731494, guid: b1f04ee7c9aa58e498f1abfc86703c7a, type: 3}
-  upBgSprite: {fileID: -7475175826221350000, guid: b1f04ee7c9aa58e498f1abfc86703c7a, type: 3}
-  downBgSprite: {fileID: -4688336444888202677, guid: b1f04ee7c9aa58e498f1abfc86703c7a, type: 3}
-  leftBgSprite: {fileID: -2025420548317366452, guid: b1f04ee7c9aa58e498f1abfc86703c7a, type: 3}
-  rightBgSprite: {fileID: -6747717093991021838, guid: b1f04ee7c9aa58e498f1abfc86703c7a, type: 3}
-  selfBg: {fileID: 993970030118756957}
+  m_EditorClassIdentifier: Assembly-CSharp::Troll
+  ghosted: 0
+  alive: 1
+  playerOnlyPass: 0
+  hp: 4
+  armor: 0
+  attackAudio: {fileID: 8300000, guid: dd3a35488967b204b8369be854d77f78, type: 3}
+  attackVol: 0.6
+  hurtAudio: {fileID: 8300000, guid: 2875d376f6066234baf94e5e85ce2bd5, type: 3}
+  hurtVol: 0.4
+--- !u!114 &7762078329181788055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2939650004526901298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ba7263fa17b4f45ac8239e476e1e82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSpriteManager
+  upFrontSprite: {fileID: -3074640481320496088, guid: b1f04ee7c9aa58e498f1abfc86703c7a, type: 3}
+  downFrontSprite: {fileID: -2246245484648453396, guid: b1f04ee7c9aa58e498f1abfc86703c7a, type: 3}
+  leftFrontSprite: {fileID: -1777073656344616, guid: b1f04ee7c9aa58e498f1abfc86703c7a, type: 3}
+  rightFrontSprite: {fileID: -1609190528228731494, guid: b1f04ee7c9aa58e498f1abfc86703c7a, type: 3}
+  upBackSprite: {fileID: -7475175826221350000, guid: b1f04ee7c9aa58e498f1abfc86703c7a, type: 3}
+  downBackSprite: {fileID: -4688336444888202677, guid: b1f04ee7c9aa58e498f1abfc86703c7a, type: 3}
+  leftBackSprite: {fileID: -2025420548317366452, guid: b1f04ee7c9aa58e498f1abfc86703c7a, type: 3}
+  rightBackSprite: {fileID: -6747717093991021838, guid: b1f04ee7c9aa58e498f1abfc86703c7a, type: 3}
+  front: {fileID: 1043239487233356172}
+  back: {fileID: 2803470663890529596}
   highColor: {r: 1, g: 0, b: 0.26666668, a: 1}
-  lowColor: {r: 0.59607846, g: 0.17254902, b: 0.21568629, a: 1}
-  flashing: 0
-  hit: 0
-  face: left
-  aggro: {fileID: 0}
-  aggroCooldown: 0
+  lowColor: {r: 0.59607846, g: 0.17254902, b: 0.21568628, a: 1}
+--- !u!82 &6349580075349226055
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2939650004526901298}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
