@@ -6,6 +6,7 @@ public class CameraMan : MonoBehaviour
     public Transform target;
     public Transform anchor;
     public float zoom = 4;
+    public float cameraShake = 0;
 
     float zoomLast = 2;
     Transform targetLast;
@@ -45,9 +46,11 @@ public class CameraMan : MonoBehaviour
         float cameraLastY = (1 - ratio) * anchorLastY + ratio * targetLastY;
         cameraX = Easing(cameraLastX, cameraX);
         cameraY = Easing(cameraLastY, cameraY);
-        Vector3 cameraPos = new Vector3(cameraX, cameraY, transform.position.z);
+        Vector3 cameraPos = new Vector3(cameraX, cameraY, Easing(zoomLast, zoom) * -3.0f);
         GetComponent<Transform>().position = cameraPos;
         GetComponent<Camera>().orthographicSize = Easing(zoomLast, zoom);
+        float randomRot = UnityEngine.Random.Range(-1.0f, 1.0f);
+        GetComponent<Transform>().eulerAngles = new Vector3(0, 0, cameraShake * randomRot);
     }
 
     public void TickSystem()
