@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 
 public class AttackInfo
@@ -100,6 +101,10 @@ public class Player : MovableGridEntity
         {
             hp -= damages;
             LastPos = CurrentPos + attackInfo.knockback;
+        }
+        if (hp <= 0)
+        {
+            SceneManager.LoadScene(0);
         }
         characterSpriteManager.hit = true;
     }

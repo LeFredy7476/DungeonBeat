@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -16,14 +17,14 @@ public class Globals : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (Instance != null && Instance != this && !Instance.IsDestroyed())
         {
             Destroy(gameObject); // Destroy duplicate instances
         }
         else
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Persist across scenes
+            //DontDestroyOnLoad(gameObject); // Persist across scenes
         }
     }
 
